@@ -68,7 +68,6 @@ function App() {
                   <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
                 </svg>
               </a>
-              <a className="btn-ghost" href="#">Como funciona →</a>
             </div>
           </div>
           <div className="hero-canvas-wrap">
