@@ -125,7 +125,7 @@ function Thumb({ palette, pattern, title }) {
 }
 
 function Card({ item }) {
-  const href = item.id === "metodologia-especificacao" ? "especificacao-requisitos.html" : null;
+  const href = item.href || null;
   const onClick = () => { if (href) window.location.href = href; };
   return (
     <article className="card" onClick={onClick} style={{ cursor: href ? "pointer" : "default" }}>
@@ -139,9 +139,7 @@ function Card({ item }) {
       <div className="card-body">
         <h3 className="card-title">{item.title}</h3>
         <div className="card-meta">
-          <span>{item.sections} seções</span>
-          <span className="sep" />
-          <span className="updated">Atualizado {item.updated}</span>
+          <span className="updated">{item.meta}</span>
         </div>
       </div>
     </article>
